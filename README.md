@@ -1,5 +1,5 @@
-# rust-new-project-template
-A good starting point for a new Rust project
+# IDS721-Proj3
+**This is my study for Rust + Rocket Web Framework project**
 
 ## References
 
