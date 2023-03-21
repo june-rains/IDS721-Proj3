@@ -1,4 +1,4 @@
-use diesel::{QueryResult, SqliteConnection}
+use diesel::{QueryResult, SqliteConnection};
 use crate::models::Product;
 use crate::models::NewProduct;
 use crate::schema::products;
