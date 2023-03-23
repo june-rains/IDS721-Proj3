@@ -7,12 +7,13 @@ services:
     tty: true
     volumes:
       - ./database/:/root/db/
-  web:
+  webapp:
     build:
       context: .
       dockerfile: ./Dockerfile
+    working_dir: /app
     ports:
-      - "8000:8000"
+      - "8001:8000"
     volumes:
       - ./:/app
       - ./database/:/usr/src/app/database/
