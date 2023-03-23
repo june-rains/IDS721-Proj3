@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./database/:/root/db/
+  webapp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    working_dir: /app
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./:/app
+      - ./database/:/usr/src/app/database/
